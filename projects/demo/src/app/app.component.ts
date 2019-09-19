@@ -10,14 +10,14 @@ export class AppComponent {
     {
       title: "Formatting",
       message:
-        "Wim can *bold* and _italicize_." +
+        "WIM can *bold* and _italicize_." +
         "\n\n*This _works_ nested*, _both *ways* well_." +
         "\n\nThis *also works _across* each other_."
     },
     {
       title: "Links",
       message:
-        "Wim will format links too: http://twitter.com, https://reddit.com, www.reddit.com!"
+        "WIM will format links too: http://twitter.com, https://reddit.com, www.reddit.com!"
     }
   ];
 }

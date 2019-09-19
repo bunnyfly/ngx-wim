@@ -1,13 +1,51 @@
 .blocks {
   .block-wrapper {
     display: inline-block;
-    padding: 16px;
+    margin-bottom: 16px;
+    padding-left: 0;
+    padding-right: 8px;
     vertical-align: top;
     width: 50%;
 
+    @media screen and (max-width: 599px) {
+      padding-left: 0;
+      padding-right: 16px;
+      width: 100%;
+      & + .block-wrapper {
+        padding-left: 16px;
+        padding-right: 0;
+      }
+    }
+
+    & + .block-wrapper {
+      padding-left: 8px;
+      padding-right: 0;
+    }
+
     .block {
       background: #f8f8f8;
+      border: 1px solid #ddd;
+      border-radius: 16px;
       padding: 16px;
+
+      &:before {
+        color: rgba(0, 0, 0, 0.5);
+        content: "Before";
+        display: block;
+        font-family: Lato, "Lucida Grande", Tahoma, Sans-Serif;
+        font-size: 10px;
+        font-weight: bold;
+        margin: -8px 0 8px 0;
+        text-transform: uppercase;
+      }
+
+      &.block-wim {
+        background: #efe;
+
+        &:before {
+          content: "WIM";
+        }
+      }
     }
   }
 }
