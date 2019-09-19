@@ -1,6 +1,19 @@
 {
   "name": "ngx-wim",
   "version": "0.0.1",
+  "description": "You know WIM!",
+  "keywords": [
+    "Angular",
+    "Library",
+    "Markdown",
+    "Formatting"
+  ],
+  "license": "SEE LICENSE IN LICENSE",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bunnyfly/ngx-wim"
+  },
+  "homepage": "https://github.com/bunnyfly/ngx-wim",
   "peerDependencies": {
     "@angular/common": "^8.2.7",
     "@angular/core": "^8.2.7"

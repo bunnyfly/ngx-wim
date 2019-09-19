@@ -1,18 +1,12 @@
-import {
-  Directive,
-  ElementRef,
-  Input,
-  OnChanges,
-  Renderer2
-} from "@angular/core";
+import { Directive, ElementRef, Input, OnChanges, Renderer2 } from '@angular/core';
 
-import { WimService } from "./wim.service";
+import { WimService } from './wim.service';
 
 @Directive({
-  selector: "[wim]"
+  selector: '[wim]',
 })
 export class WimDirective implements OnChanges {
-  @Input("wim") wim: string;
+  @Input('wim') wim: string;
 
   constructor(
     private elementRef: ElementRef,
@@ -21,11 +15,7 @@ export class WimDirective implements OnChanges {
   ) {}
 
   ngOnChanges() {
-    const html = this.wimService.toHtml(this.wim || "");
-    this.renderer2.setProperty(
-      this.elementRef.nativeElement,
-      "innerHTML",
-      html
-    );
+    const html = this.wimService.toHtml(this.wim || '');
+    this.renderer2.setProperty(this.elementRef.nativeElement, 'innerHTML', html);
   }
 }

@@ -1,5 +1,5 @@
-import { Injectable, SecurityContext } from "@angular/core";
-import { DomSanitizer } from "@angular/platform-browser";
+import { Injectable, SecurityContext } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 
 export type WimOptions = {
   noEscape?: boolean;
@@ -7,7 +7,7 @@ export type WimOptions = {
 };
 
 @Injectable({
-  providedIn: "root"
+  providedIn: 'root',
 })
 export class WimService {
   constructor(private domSanitizer: DomSanitizer) {}
@@ -18,11 +18,11 @@ export class WimService {
     // class avoids it.
     const msg = message;
     return msg
-      .replace(/&/g, "&amp;")
-      .replace(/</g, "&lt;")
-      .replace(/>/g, "&gt;")
-      .replace(/"/g, "&quot;")
-      .replace(/'/g, "&#039;");
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#039;');
   }
 
   toHtml(message: string, options: WimOptions = {}): string {
@@ -39,23 +39,17 @@ export class WimService {
     const urlFinder = /(((https?:\/\/)|(www\.))[^\s]+(?<![.,?!-]))/g;
     // TODO: Add protocol when missing, or they'll be relative links.
     message = message.replace(urlFinder, url => {
-      return '<a target="_blank" href="' + url + '">' + url + "</a>";
+      return '<a target="_blank" href="' + url + '">' + url + '</a>';
     });
 
     // *bold*
-    message = message.replace(
-      /(^|[^\*])\*(?!\*)((?:[^]*?[^\*])?)\*(?!\*)/g,
-      "$1<b>$2</b>"
-    );
+    message = message.replace(/(^|[^\*])\*(?!\*)((?:[^]*?[^\*])?)\*(?!\*)/g, '$1<b>$2</b>');
 
     // _italics_
-    message = message.replace(
-      /(^|[^\_])\_(?!\_)((?:[^]*?[^\_])?)\_(?!\_)/g,
-      "$1<em>$2</em>"
-    );
+    message = message.replace(/(^|[^\_])\_(?!\_)((?:[^]*?[^\_])?)\_(?!\_)/g, '$1<em>$2</em>');
 
     // Breaks
-    message = message.replace(/\n/g, "<br>");
+    message = message.replace(/\n/g, '<br>');
 
     if (!options.noSanitize) {
       message = this.domSanitizer.sanitize(SecurityContext.HTML, message);
