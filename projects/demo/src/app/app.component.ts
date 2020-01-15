@@ -16,7 +16,8 @@ export class AppComponent {
     },
     {
       title: 'Links',
-      message: 'WIM will format links too: http://twitter.com, https://reddit.com, www.reddit.com!',
+      message:
+        'WIM will format links too: http://www.twitter.com, https://google.com, www.reddit.com!',
     },
   ];
 }
