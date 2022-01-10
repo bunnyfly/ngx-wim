@@ -1,6 +1,12 @@
 {
   "name": "ngx-wim",
   "version": "0.1.1",
+  "main": "dist/ngx-wim/bundles/ngx-wim.umd.js",
+  "module": "dist/ngx-wim/esm2015/ngx-wim.js",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/ngx-wim/public-api.d.ts",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
