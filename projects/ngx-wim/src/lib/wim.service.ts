@@ -92,7 +92,6 @@ export class WimService {
     // to the class avoids it.
     const msg = message;
     return msg
-      .replace(/&/g, '&amp;')
       .replace(/</g, '&lt;')
       .replace(/>/g, '&gt;')
       .replace(/"/g, '&quot;')
