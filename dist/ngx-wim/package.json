@@ -1,0 +1,34 @@
+{
+  "name": "ngx-wim",
+  "version": "0.1.0",
+  "description": "You know WIM!",
+  "keywords": [
+    "Angular",
+    "Library",
+    "Markdown",
+    "Formatting"
+  ],
+  "license": "SEE LICENSE IN LICENSE",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bunnyfly/ngx-wim"
+  },
+  "homepage": "https://github.com/bunnyfly/ngx-wim",
+  "peerDependencies": {
+    "@angular/common": "^8.2.7",
+    "@angular/core": "^8.2.7"
+  },
+  "main": "bundles/ngx-wim.umd.js",
+  "module": "fesm5/ngx-wim.js",
+  "es2015": "fesm2015/ngx-wim.js",
+  "esm5": "esm5/ngx-wim.js",
+  "esm2015": "esm2015/ngx-wim.js",
+  "fesm5": "fesm5/ngx-wim.js",
+  "fesm2015": "fesm2015/ngx-wim.js",
+  "typings": "ngx-wim.d.ts",
+  "metadata": "ngx-wim.metadata.json",
+  "sideEffects": false,
+  "dependencies": {
+    "tslib": "^1.9.0"
+  }
+}
